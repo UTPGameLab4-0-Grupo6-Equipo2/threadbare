@@ -351,7 +351,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+[node name="FondoPrincipal" type="TextureRect" parent="CanvasLayer/Control"]
 material = SubResource("ShaderMaterial_8twl8")
 layout_mode = 1
 anchors_preset = 15
