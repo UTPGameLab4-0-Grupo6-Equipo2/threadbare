@@ -1,70 +1,60 @@
-[gd_scene load_steps=29 format=3 uid="uid://712saqgof3kf"]
+[gd_scene load_steps=28 format=3 uid="uid://712saqgof3kf"]
 
 [ext_resource type="Script" uid="uid://dj5shb75ckk2a" path="res://scenes/game_elements/props/eternal_loom/components/eternal_loom.gd" id="1_0f752"]
-[ext_resource type="Texture2D" uid="uid://cj62bpasgf643" path="res://scenes/game_elements/props/eternal_loom/components/eternal_loom_blue.png" id="2_dj2yp"]
+[ext_resource type="Texture2D" uid="uid://b23ltifpoto47" path="res://assets/cafeteria/cafeteria.png" id="2_12bvc"]
 [ext_resource type="PackedScene" uid="uid://dutgnbiy7xalb" path="res://scenes/game_elements/props/interact_area/interact_area.tscn" id="3_kyhkd"]
 [ext_resource type="Texture2D" uid="uid://5wscjc8yqqts" path="res://assets/first_party/collectibles/world_memory.png" id="4_12bvc"]
 [ext_resource type="Texture2D" uid="uid://6bf8rum68wq3" path="res://assets/first_party/collectibles/world_imagination.png" id="5_eq7jh"]
 [ext_resource type="Texture2D" uid="uid://cepg1o3ihp055" path="res://assets/first_party/collectibles/world_spirit.png" id="6_hfqem"]
 [ext_resource type="AudioStream" uid="uid://bg8u4en3hlo6w" path="res://assets/third_party/sounds/eternal_loom/EternalLoomShort.ogg" id="7_12bvc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dj2yp"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(0, 0, 320, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_12bvc"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(320, 0, 320, 256)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_eq7jh"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(640, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfqem"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(960, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjlja"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(1280, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2bt4"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(1600, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(0, 100, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rle0d"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(1920, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(100, 100, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f3ofd"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(2240, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(200, 100, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ydsa"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(2560, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(0, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gc4ix"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(2880, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(100, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xuclr"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(3200, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(200, 200, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6ohj"]
-atlas = ExtResource("2_dj2yp")
-region = Rect2(3520, 0, 320, 256)
+atlas = ExtResource("2_12bvc")
+region = Rect2(0, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jart"]
+atlas = ExtResource("2_12bvc")
+region = Rect2(100, 300, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1jart"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dj2yp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_12bvc")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eq7jh")
 }, {
@@ -94,6 +84,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l6ohj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jart")
 }],
 "loop": true,
 "name": &"default",
@@ -522,9 +515,11 @@ script = ExtResource("1_0f752")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(1.5, 1.43)
+position = Vector2(9, -12.5)
+scale = Vector2(5.844, 5)
 sprite_frames = SubResource("SpriteFrames_1jart")
 autoplay = "default"
+frame_progress = 0.860329
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

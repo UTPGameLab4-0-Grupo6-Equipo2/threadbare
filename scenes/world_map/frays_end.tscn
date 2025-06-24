@@ -233,7 +233,6 @@ flip_h = true
 position = Vector2(781, 614)
 
 [node name="Buildings" type="Node2D" parent="."]
-visible = false
 y_sort_enabled = true
 
 [node name="House_1" parent="Buildings" instance=ExtResource("5_5jg1p")]
@@ -386,7 +385,7 @@ unique_name_in_owner = true
 
 [node name="EternalLoom" parent="." instance=ExtResource("16_ojp30")]
 unique_name_in_owner = true
-position = Vector2(993, 485)
+position = Vector2(988, 536)
 scale = Vector2(0.9, 0.9)
 
 [node name="ForestLimit" type="StaticBody2D" parent="."]
@@ -399,11 +398,6 @@ collision_mask = 0
 position = Vector2(-2.33667, 6.93182)
 scale = Vector2(1.00152, 1.02166)
 polygon = PackedVector2Array(-877.343, -208.91, -817.673, -167.124, -758.004, -191.418, -697.43, -150.605, -638.664, -170.04, -579.899, -209.882, -460.559, -201.136, -390.04, -228.345, -324.042, -206.966, -255.332, -160.322, -168.539, -205.023, -99.8287, -193.362, -2.18738, -175.87, 55.6742, -183.644, 109.919, -223.486, 171.397, -226.401, 217.506, -200.164, 320.572, -186.559, 404.652, -186.559, 505.005, -189.475, 517.662, -237.091, 589.455, -238.273, 670.946, -241.251, 812.201, -217.423, 889.163, -140.978, 974.222, 0.017334, -874.675, -0.992798)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ForestLimit"]
-position = Vector2(6.10352e-05, -1792.01)
-scale = Vector2(1.00305, 1)
-polygon = PackedVector2Array(-873.82, 17.8702, -689.668, 200.546, -618.354, 169.769, -545.235, 221.395, -473.921, 218.416, -396.288, 198.56, -292.477, 203.524, -221.163, 234.301, -112.838, 248.2, 16.2487, 229.337, 102.908, 234.301, 180.541, 220.402, 250.952, 228.344, 366.499, 163.812, 447.742, 157.855, 557.873, 112.186, 637.311, 51.6255, 710.43, 88.3592, 853.058, 87.3664, 974.02, -238.273, -881.944, -234.302)
 
 [node name="Rocks" type="Node2D" parent="."]
 y_sort_enabled = true
