@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b82nsrh332syj"]
 
-[ext_resource type="Script" uid="uid://dfj3625owet5p" path="res://scenes/game_elements/characters/enemies/throwing_enemy/components/throwing_enemy.gd" id="1_h2r0k"]
+[ext_resource type="Script" uid="uid://cgfgasdngla7v" path="res://scenes/game_elements/characters/enemies/zombie/zombie.gd" id="1_h2r0k"]
 [ext_resource type="SpriteFrames" uid="uid://deosvk5k4su5f" path="res://scenes/quests/story_quests/template/2_template_combat/template_combat_components/template_throwing_enemy.tres" id="2_s382l"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
@@ -239,13 +239,12 @@ _data = {
 }
 
 [node name="ThrowingEnemy" type="CharacterBody2D" groups=["throwing_enemy"]]
-collision_layer = 2
-collision_mask = 17
+collision_mask = 19
 script = ExtResource("1_h2r0k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(0, -30)
+position = Vector2(150, 68)
 sprite_frames = ExtResource("2_s382l")
 animation = &"walk"
 autoplay = "idle"
@@ -270,7 +269,7 @@ collision_layer = 128
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, -31.5)
+position = Vector2(149, 63)
 shape = SubResource("RectangleShape2D_ffq0m")
 debug_color = Color(0.990065, 0, 0.28292, 0.42)
 
@@ -290,6 +289,7 @@ bus = &"SFX"
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="Sounds"]
 unique_name_in_owner = true
+position = Vector2(2, 6)
 volume_db = 5.0
 max_distance = 1000.0
 bus = &"SFX"

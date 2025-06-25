@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=4 uid="uid://uu5l3vkgdya7"]
+[gd_scene load_steps=9 format=4 uid="uid://uu5l3vkgdya7"]
 
 [ext_resource type="TileSet" uid="uid://bdcxn5nqhjr23" path="res://scenes/eternal_loom_sokoban/components/concrete.tres" id="1_r0uwo"]
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="2_lbx12"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="3_lbx12"]
 [ext_resource type="Texture2D" uid="uid://xnccnixxgy81" path="res://scenes/quests/story_quests/infection/infection_scene_1/resources/mesa.png" id="4_0sp6n"]
+[ext_resource type="Texture2D" uid="uid://b23ltifpoto47" path="res://assets/cafeteria/cafeteria.png" id="5_r12vb"]
+[ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/zombie/zombie.tscn" id="6_ttkhy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r12vb"]
 size = Vector2(346.474, 289.007)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttkhy"]
+size = Vector2(82.9524, 60.8841)
 
 [node name="Azotea" type="Node2D"]
 
@@ -36,7 +41,6 @@ texture = ExtResource("4_0sp6n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapsLayer/Sprite2D/StaticBody2D"]
 position = Vector2(0, -3.5827)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r12vb")
 
 [node name="Sprite2D2" type="Sprite2D" parent="TileMapsLayer"]
@@ -48,7 +52,6 @@ texture = ExtResource("4_0sp6n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapsLayer/Sprite2D2/StaticBody2D"]
 position = Vector2(6.41614, -0.000114441)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r12vb")
 
 [node name="Sprite2D3" type="Sprite2D" parent="TileMapsLayer"]
@@ -60,7 +63,6 @@ texture = ExtResource("4_0sp6n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapsLayer/Sprite2D3/StaticBody2D"]
 position = Vector2(-2.13879, -11.9425)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r12vb")
 
 [node name="Sprite2D4" type="Sprite2D" parent="TileMapsLayer"]
@@ -72,5 +74,18 @@ texture = ExtResource("4_0sp6n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapsLayer/Sprite2D4/StaticBody2D"]
 position = Vector2(2.13879, -2.38866)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r12vb")
+
+[node name="Sprite2D5" type="Sprite2D" parent="TileMapsLayer"]
+position = Vector2(1686, 641)
+scale = Vector2(3.23077, 2.84146)
+texture = ExtResource("5_r12vb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMapsLayer/Sprite2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapsLayer/Sprite2D5/StaticBody2D"]
+position = Vector2(-2.4762, 13.1974)
+shape = SubResource("RectangleShape2D_ttkhy")
+
+[node name="ThrowingEnemy" parent="TileMapsLayer" instance=ExtResource("6_ttkhy")]
+position = Vector2(1691, 597)
